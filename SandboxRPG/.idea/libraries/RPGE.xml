@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="RPGE">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../RPGE/out/artifacts/RPGE_jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../RPGE/src" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../RPGE/out/artifacts/RPGE_jar" recursive="false" />
+  </library>
+</component>

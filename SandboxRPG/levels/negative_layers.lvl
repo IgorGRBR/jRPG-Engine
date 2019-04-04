@@ -1,0 +1,13 @@
+name Negative Layers Test
+tileset tile_overworld
+chunksize 4 4
+
+
+layer 0
+chunk 0 1
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
