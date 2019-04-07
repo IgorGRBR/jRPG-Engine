@@ -263,15 +263,15 @@ public class WorldScene extends AbstractScene
     @Override
     public void step(float delta)
     {
+        camera.update();
         step_system.process(eAPI);
         phys_system.process(eAPI);
-        camera.update();
     }
 
     @Override
     public void draw(Graphics gfx)
     {
-        gfx.translate(-camera.getCornerX(), -camera.getCornerY());
+        gfx.translate(Math.round(-camera.getCornerX()), Math.round(-camera.getCornerY()));
         for (int i = 0; i < draw_system.getLayerCount(); i++)
         {
             tilemap.drawLayer(gfx, i, camera);

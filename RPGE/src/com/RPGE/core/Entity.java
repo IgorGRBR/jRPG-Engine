@@ -25,12 +25,12 @@ public abstract class Entity
 
     void setPosX(int ix, int tile_width)
     {
-        x = ix * tile_width;
+        x = ix * tile_width + tile_width/2;
         tile_x = ix;
     }
     void setPosY(int iy, int tile_height)
     {
-        y = iy * tile_height;
+        y = iy * tile_height + tile_height/2;
         tile_y = iy;
     }
     void setRealPosX(int ix, int tile_width)

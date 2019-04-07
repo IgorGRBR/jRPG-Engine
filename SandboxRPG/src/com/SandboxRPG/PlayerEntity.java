@@ -6,6 +6,7 @@ import com.RPGE.core.Direction;
 import com.RPGE.core.Entity;
 import com.RPGE.core.EntityAPI;
 import com.RPGE.core.IEntity;
+import org.lwjgl.Sys;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class PlayerEntity extends Entity implements IEntity
     Direction direction;
     boolean moving;
     int horizontal, vertical;
-    int prev_x, prev_y;
+    int prev_x, prev_y, prev_real_x, prev_real_y;
 
     //CONSTANTS
     final float MOVE_SPEED = 0.05f;
@@ -41,8 +42,10 @@ public class PlayerEntity extends Entity implements IEntity
 
         //Set camera to self
         eAPI.getCamera().setFocus(this);
-        eAPI.getCamera().setSmoothing(0.0f);
-        eAPI.getCamera().setSpeed(MOVE_SPEED, MOVE_SPEED);
+        eAPI.getCamera().setSmoothing(1.0f);
+
+        prev_real_x = this.getRealPosX();
+        prev_real_y = this.getRealPosY();
     }
 
     @Override
@@ -73,8 +76,6 @@ public class PlayerEntity extends Entity implements IEntity
     @Override
     public void step(EntityAPI eAPI)
     {
-        prev_x = this.getPosX();
-        prev_y = this.getPosY();
         if (!moving)
         {
             int down = eAPI.keyDown("down") ? 1 : 0;
@@ -96,12 +97,18 @@ public class PlayerEntity extends Entity implements IEntity
 
             if (Math.abs(horizontal) > 0 || Math.abs(vertical) > 0)
             {
+                //Setup previous positions values
+                prev_x = this.getPosX();
+                prev_y = this.getPosY();
+                prev_real_x = this.getRealPosX();
+                prev_real_y = this.getRealPosY();
+
+                //Move
                 eAPI.move(this, direction);
                 moving = true;
             }
             else
                 anim_progress = 0.0f;
-                eAPI.getCamera().setOffset(0, 0);
         }
         else
         {
@@ -117,15 +124,16 @@ public class PlayerEntity extends Entity implements IEntity
                 walk_progress = 0.0f;
                 moving = false;
             }
-
-            //eAPI.getCamera().setOffset(
-            //        (int)(horizontal*eAPI.getTileWidth()*(walk_progress-1.0f)/2),
-            //        (int)(vertical*eAPI.getTileHeight()*(walk_progress-1.0f)/2)
-            //);
+            else
+            {
+                //Smooth out camera between tiles
+                eAPI.getCamera().interp(prev_real_x, prev_real_y,
+                        1.0f - walk_progress,
+                        1.0f - walk_progress);
+            }
         }
 
         if (eAPI.keyPressed("reset")) eAPI.reloadWorld();
-
     }
 
     @Override
@@ -150,15 +158,16 @@ public class PlayerEntity extends Entity implements IEntity
         }
         if (!moving)
             eAPI.drawSpriteOffset(plr_sprite,
-                this.getPosX(), this.getPosY(),
-                0, -14,
-                idx, idy);
+                    this.getPosX(), this.getPosY(),
+                    0, -14,
+                    idx, idy);
         else
             eAPI.drawSpriteOffset(plr_sprite,
-                this.getPosX(), this.getPosY(),
-                (int)(horizontal*eAPI.getTileWidth()*(walk_progress-1.0f)),
-                (int)(vertical*eAPI.getTileHeight()*(walk_progress-1.0f)) - 14,
-                idx, idy);
+                    this.getPosX(), this.getPosY(),
+                    Math.round(horizontal*eAPI.getTileWidth()*(walk_progress-1.0f)),
+                    Math.round(vertical*eAPI.getTileHeight()*(walk_progress-1.0f)) - 14,
+                    idx, idy);
+
     }
 
     public static String getName()

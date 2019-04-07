@@ -1,0 +1,43 @@
+name Inverse Loading Test
+tileset tile_overworld
+chunksize 4 4
+
+layer 5
+entity player 1 1
+
+layer 3
+chunk 1 1
+tile_data
+1 17 1 17
+17 1 17 1
+1 17 49 17
+17 1 17 1
+chunk_data
+0 0 0 0
+0 0 0 0
+0 0 5 0
+0 0 0 0
+
+layer 1
+chunk 0 1
+tile_data
+1 17 1 17
+17 1 17 1
+1 17 1 17
+17 1 17 1
+
+layer 2
+chunk 1 0
+tile_data
+1 17 1 17
+17 1 17 1
+1 17 1 17
+17 1 17 1
+
+layer 3
+chunk 0 0
+tile_data
+1 17 1 17
+17 1 17 1
+1 17 1 17
+17 1 17 1

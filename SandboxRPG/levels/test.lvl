@@ -10,7 +10,7 @@ tileset tile_overworld
 #'chunksize' keyword specifies the size of a single chunk in tiles
 chunksize 4 4
 
-#'layer' keyword specifies the number of a layer to use when writing tile data
+#'layer' keyword specifies the number of a layer to use when writing tile or entity data
 layer 0
 
 #'chunk' keyword specifies the chunk to write by its coordinate

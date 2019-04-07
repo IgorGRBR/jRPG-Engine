@@ -15,7 +15,6 @@ public class EntityFactory
     public EntityFactory()
     {
         binds = new HashMap<>();
-        //TODO: Finish entity factory
     }
 
     public void bind(Class<? extends Entity> cla) throws RPGEException
@@ -45,7 +44,7 @@ public class EntityFactory
         }
         else
         {
-            throw new RPGEException("Entity class does not implement IEntity");
+            throw new RPGEException("Entity class does not implement IEntity!");
         }
     }
 

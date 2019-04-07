@@ -25,51 +25,53 @@ tile_data
 1 1 1 1
 1 1 1 1
 
-chunk 1 0
-tile_data
+#'chunk_data' keyword specifies functional tile data (solid tiles, one way tiles, etc..)
+#0 and 1 are default values (0 - empty, 1 - solid)
+#chuk_data should be followed by a 2-dimensional array of integers. Dimensions of the array 
+#should correspond to specified chunk size. Otherwise exception will be thrown!
+chunk_data
 1 1 1 1
-1 1 1 1
-1 1 1 1
-1 1 1 1
-
-chunk 0 1
-tile_data
-1 1 1 1
-1 1 1 1
-1 1 1 1
-1 1 1 1
-
-layer 2
-chunk 0 1
-tile_data
-0 29 30 0
-0 24 25 0
-0 0 0 0
-0 0 0 0
+1 0 1 1
+1 0 1 1
+1 0 0 0
 
 layer 1
-chunk 0 1
-tile_data
-0 0 0 0
-0 0 0 0
-0 19 20 0
-0 0 0 0
+#'entity' specifies entity to spawn.
+#entity should be followed by its name and x and y positions (in tiles)
+#Any additional arguments after these will be forwarded towards entity 
+entity player 1 1
+entity npc 1 3
 
-chunk 0 0
-tile_data
-0 0 0 0
-0 0 0 0
-0 0 19 18
-0 0 0 0
-
+#Grassy field
+layer 0
 chunk 1 0
 tile_data
-0 0 0 0
-0 0 0 0
-18 20 0 0
-0 0 0 0
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
 
-layer 0
+chunk 2 0
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 3 0
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 0 1
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
 chunk 1 1
 tile_data
 1 1 1 1
@@ -77,6 +79,217 @@ tile_data
 1 1 1 1
 1 1 1 1
 
+chunk 2 1
+tile_data
+1 1 1 1
+1 49 1 1
+1 1 1 1
+1 1 1 1
+chunk_data
+0 0 0 0
+0 2 0 0
+0 0 0 0
+0 0 0 0
+
+chunk 3 1
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 0 2
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 1 2
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 2 2
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 3 2
+tile_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+#Mid rocks
+layer 2
+chunk 0 1
+tile_data
+0 33 34 0
+0 24 25 0
+0 0 0 0
+0 0 0 0
+
+layer 1
+chunk 0 1
+tile_data
+41 0 0 0
+41 0 0 0
+41 19 20 0
+41 0 0 0
+chunk_data
+1 0 0 4
+1 1 1 0
+1 1 1 0
+1 0 0 0
+
+#Top forest
+#Bottom
+layer 1
+chunk 0 0
+tile_data
+43 38 0 0
+41 0 0 0
+41 0 19 18
+41 0 0 0
+#(collision is at the top)
+
+chunk 1 0
+tile_data
+0 0 37 36
+0 0 0 0
+18 20 0 0
+0 0 0 0
+chunk_data
+1 1 1 1
+1 1 0 0
+1 1 0 0
+0 0 0 0
+
+chunk 2 0
+tile_data
+36 42 39 39
+0 40 39 39
+0 37 36 36
+0 0 0 0
+chunk_data
+1 1 1 1
+0 1 1 1
+0 1 1 1
+0 0 0 0
+
+chunk 3 0
+tile_data
+39 39 39 39
+39 39 39 39
+39 39 39 39
+37 42 39 39
+chunk_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 3 1
+tile_data
+0 37 42 39
+0 0 40 39
+0 0 40 39
+0 0 0 0
+layer 2
+chunk 3 1
+tile_data
+0 0 0 0
+0 0 0 0
+0 0 0 0
+47 45 39 39
+chunk_data
+0 1 1 1
+0 0 1 1
+0 0 1 1
+0 0 1 1
+
+layer 1
+chunk 3 2
+tile_data
+39 39 39 39
+39 39 39 39
+39 39 39 39
+39 39 39 39
+chunk_data
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
+
+chunk 2 2
+tile_data
+0 0 0 0
+0 0 39 39
+39 39 39 39
+39 39 39 39
+
+layer 2
+chunk 2 2
+tile_data
+0 47 44 45
+45 39 0 0
+0 0 0 0
+0 0 0 0
+chunk_data
+0 0 0 0
+0 1 1 1
+1 1 1 1
+1 1 1 1
+
+layer 1
+chunk 1 2
+tile_data
+0 0 0 0
+0 0 0 0
+0 0 39 39
+39 39 39 39
+
+layer 2
+chunk 1 2
+tile_data
+0 0 0 0
+0 47 44 44
+45 39 0 0
+0 0 0 0
+chunk_data
+0 0 0 0
+0 0 0 0
+0 1 1 1
+1 1 1 1
+
+layer 1
+chunk 0 2
+tile_data
+41 0 0 0
+41 0 0 0
+39 0 0 0
+39 39 39 39
+
+layer 2
+chunk 0 2
+tile_data
+0 0 0 0
+0 0 0 0
+0 46 44 44
+0 0 0 0
+chunk_data
+1 0 0 0
+1 0 0 0
+1 0 0 0
+1 1 1 1
+
+#Path test
 layer 1
 chunk 1 1
 tile_data
@@ -85,6 +298,7 @@ tile_data
 0 4 12 14
 16 3 7 0
 
+#Top rocks (collision mask above)
 layer 2
 chunk 0 0
 tile_data
@@ -93,46 +307,11 @@ tile_data
 0 0 0 0
 0 0 0 0
 
-#'chunk_data' keyword specifies functional tile data (solid tiles, one way tiles, etc..)
-#0 and 1 are default values (0 - empty, 1 - solid)
-#chuk_data should be followed by a 2-dimensional array of integers. Dimensions of the array 
-#should correspond to specified chunk size. Otherwise exception will be thrown!
-chunk_data
-0 0 1 1
-0 0 1 1
-0 0 1 1
-0 0 0 0
-
 chunk 1 0
 tile_data
 17 22 0 0
 17 22 0 0
 0 0 0 0
 0 0 0 0
-chunk_data
-1 1 0 0
-1 1 0 0
-1 1 0 0
-0 0 0 0
 
-chunk 0 1
-chunk_data
-0 0 0 4
-0 1 1 0
-0 1 1 0
-0 0 0 0
-
-chunk 1 1
-chunk_data
-0 0 0 0
-0 0 0 0
-0 0 0 0
-0 0 0 0
-
-layer 1
-#'entity' specifies entity to spawn.
-#entity should be followed by its name and x and y positions (in tiles)
-#Any additional arguments after these will be forwarded towards entity 
-entity player 1 1
-entity npc 1 3
 entity npc 7 5

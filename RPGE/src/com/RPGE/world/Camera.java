@@ -1,6 +1,7 @@
 package com.RPGE.world;
 
 import com.RPGE.core.Entity;
+import org.lwjgl.Sys;
 
 public class Camera
 {
@@ -11,8 +12,7 @@ public class Camera
     //Camera control
     private int boundary_x, boundary_y;
     private float x, y;
-    private int offset_x, offset_y;
-    private float hspeed, vspeed; //Maximum movement speeds
+    private float offset_x, offset_y;
     private float smoothing; //Smoothing factor
 
     private Entity focus;
@@ -34,9 +34,6 @@ public class Camera
         offset_x = 0;
         offset_y = 0;
 
-        hspeed = 0;
-        vspeed = 0;
-
         smoothing = 1.0f;
     }
 
@@ -49,20 +46,22 @@ public class Camera
     {
         if (focus != null)
         {
-            moveFlat(
-                    focus.getRealPosX() + TILE_WIDTH/2,
-                    focus.getRealPosY() + TILE_HEIGHT/2);
             moveSmooth(
-                    focus.getRealPosX() + TILE_WIDTH/2,
-                    focus.getRealPosY() + TILE_HEIGHT/2);
+                    focus.getRealPosX(),
+                    focus.getRealPosY());
         }
     }
 
-    public float getX() { return x + offset_x; }
-    public float getY() { return y + offset_y; }
+    public float getX() { return Math.round(x + offset_x); }
+    public float getY() { return Math.round(y + offset_y); }
 
-    public int getCornerX() { return (int)getX() - screen_width/2; }
-    public int getCornerY() { return (int)getY() - screen_height/2; }
+    public int getCornerX() { return Math.round(getX() - screen_width/2.0f); }
+    public int getCornerY() { return Math.round(getY() - screen_height/2.0f); }
+
+    public void interp(float pre_x, float pre_y, float x_factor, float y_factor)
+    {
+        setPos(x - (x - pre_x) * x_factor, y - (y - pre_y) * y_factor);
+    }
 
     public void setPos(float ix, float iy)
     {
@@ -77,37 +76,14 @@ public class Camera
 
     private void moveSmooth(int ix, int iy)
     {
-        move((int)((ix - x) * smoothing),
-                (int)((iy - y) * smoothing));
+        move(((ix - x) * smoothing),
+                ((iy - y) * smoothing));
     }
 
-    private void moveFlat(int ix, int iy)
-    {
-        if (((ix + offset_x >= screen_width/2
-                && ix + offset_x <= boundary_x - screen_width/2)
-                && Math.abs((ix - x)) > hspeed*TILE_WIDTH))
-        {
-            move((Math.signum(ix - x) * hspeed * TILE_WIDTH), 0);
-        }
-
-        if((iy + offset_y >= screen_height/2
-                && iy + offset_y <= boundary_y - screen_height/2)
-                && Math.abs((iy - y)) > vspeed*TILE_HEIGHT)
-        {
-            move(0, (Math.signum(iy - y) * vspeed * TILE_HEIGHT));
-        }
-    }
-
-    public void setOffset(int ix, int iy)
+    public void setOffset(float ix, float iy)
     {
         offset_x = ix;
         offset_y = iy;
-    }
-
-    public void setSpeed(float h, float v)
-    {
-        hspeed = h;
-        vspeed = v;
     }
 
     public void setSmoothing(float factor)
