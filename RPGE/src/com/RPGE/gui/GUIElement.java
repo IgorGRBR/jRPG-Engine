@@ -1,12 +1,17 @@
 package com.RPGE.gui;
 
+import com.RPGE.core.GUIAPI;
+
 import java.util.HashMap;
 
 public abstract class GUIElement
 {
-    private int x, y; //x and y positions of the element (int pixels)
+    public int x, y; //x and y positions of the element (int pixels)
     private int layer; //layer index of current element
-    private boolean active, visible, removed;
+    private boolean active, removed;
+    public boolean visible;
+    public String id;
+    public GUIElement parent;
 
     public GUIElement(boolean a, boolean v)
     {
@@ -16,14 +21,10 @@ public abstract class GUIElement
         active = a;
         visible = v;
         removed = false;
+        id = "";
     }
-
-    public int getX() { return x; }
-    public int getY() { return y; }
     public int getLayer() { return layer; }
 
-    void setX(int ix) { x = ix; }
-    void setY(int iy) { y = iy; }
     void setLayer(int l) { layer = l; }
     void remove() { removed = true; }
     boolean isRemoved() { return removed; }

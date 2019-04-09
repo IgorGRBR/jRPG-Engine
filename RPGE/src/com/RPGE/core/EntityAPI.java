@@ -4,8 +4,10 @@ import com.RPGE.asset.AssetManager;
 import com.RPGE.asset.ImageAsset;
 import com.RPGE.asset.SpriteAsset;
 import com.RPGE.exception.RPGEException;
+import com.RPGE.gui.GUIController;
 import com.RPGE.system.PhysicsSystem;
 import com.RPGE.world.Camera;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
 import java.util.ArrayList;
@@ -25,6 +27,8 @@ public class EntityAPI
     PhysicsSystem phys_system;
     Camera camera;
     WorldController world_controller;
+    GUIAPI gAPI;
+    GUIController g_controller;
 
     EntityAPI()
     {
@@ -72,6 +76,16 @@ public class EntityAPI
 
     void setWorldController(WorldController wc) { world_controller = wc; }
 
+    void setGUIAPI(GUIAPI g)
+    {
+        gAPI = g;
+    }
+
+    void setGUIController(GUIController gc)
+    {
+        g_controller = gc;
+    }
+
     public Camera getCamera() { return camera; }
 
     public int getTileWidth() { return tile_width; }
@@ -80,7 +94,7 @@ public class EntityAPI
     public void reloadWorld()
     {
         world_controller.reload(world_controller.getCurrentWorld(),
-            tile_width, tile_height, this, asset_manager);
+            tile_width, tile_height, this);
     }
 
     public void switchWorld(String world)
@@ -98,7 +112,7 @@ public class EntityAPI
 
     public void drawImage(ImageAsset img, int tile_x, int tile_y)
     {
-        img.drawToContext(
+        img.drawToContextCentered(
                 tile_x*tile_width + tile_width/2,
                 tile_y*tile_height + tile_height/2,
                 gfx
@@ -107,7 +121,7 @@ public class EntityAPI
 
     public void drawImageOffset(ImageAsset img, int tile_x, int tile_y, int offset_x, int offset_y)
     {
-        img.drawToContext(
+        img.drawToContextCentered(
                 tile_x*tile_width + tile_width/2 + offset_x,
                 tile_y*tile_height + tile_height/2 + offset_y,
                 gfx
@@ -129,7 +143,7 @@ public class EntityAPI
                            int offset_x, int offset_y,
                            int idx, int idy)
     {
-        spr.drawToContext(
+        spr.drawToContextCentered(
                 tile_x*tile_width + tile_width/2 + offset_x,
                 tile_y*tile_height + tile_height/2 + offset_y,
                 idx, idy,
@@ -139,12 +153,12 @@ public class EntityAPI
 
     public void drawImageFree(ImageAsset img, int x, int y)
     {
-        img.drawToContext(x, y, gfx);
+        img.drawToContextCentered(x, y, gfx);
     }
 
     public void drawImageFreeOffset(ImageAsset img, int x, int y, int offset_x, int offset_y)
     {
-        img.drawToContext(x + offset_x, y + offset_y, gfx);
+        img.drawToContextCentered(x + offset_x, y + offset_y, gfx);
     }
 
     public void drawSpriteFree(SpriteAsset spr,
@@ -165,6 +179,12 @@ public class EntityAPI
     public void drawText(String str, int pos_x, int pos_y)
     {
         gfx.drawString(str, pos_x, pos_y);
+    }
+
+    public void drawRectangle(int x, int y, int w, int h, Color c)
+    {
+        gfx.setColor(c);
+        gfx.drawRect(x, y, w, h);
     }
 
     public AssetManager assetManager() { return asset_manager; }

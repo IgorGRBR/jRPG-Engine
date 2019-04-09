@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.RPGE.asset.AssetManager;
 import com.RPGE.asset.TilesetAsset;
+import com.RPGE.exception.RPGEException;
 import com.RPGE.file.RPGEFile;
 import com.RPGE.system.DrawSystem;
 import com.RPGE.system.PhysicsSystem;
@@ -41,7 +42,7 @@ public class WorldScene extends AbstractScene
     }
 
     @Override
-    public void load(AssetManager asset_manager, EntityFactory entity_factory)
+    public void load()
     {
         if (loaded) return;
         this.path = path;
@@ -80,8 +81,19 @@ public class WorldScene extends AbstractScene
                         world_name += " " + line.get(i);
                     }
                     break;
+                case "hud":
+                    try
+                    {
+                        eAPI.gAPI.g_controller.setCurrentLayout(
+                                eAPI.gAPI.g_controller.find(line.get(1)));
+                    }
+                    catch (RPGEException e)
+                    {
+                        e.printStackTrace();
+                    }
+                    break;
                 case "tileset":
-                    current_tileset = asset_manager.getTileset(line.get(1));
+                    current_tileset = eAPI.assetManager().getTileset(line.get(1));
                     break;
                 case "chunksize":
                     chunk_width = Integer.parseInt(line.get(1));
@@ -152,7 +164,7 @@ public class WorldScene extends AbstractScene
                     }
                     break;
                 case "entity":
-                    Entity e = entity_factory.buildEntity(line.get(1));
+                    Entity e = eAPI.world_controller.entityFactory().buildEntity(line.get(1));
                     e.setPosX(Integer.parseInt(line.get(2)), tile_width);
                     e.setPosY(Integer.parseInt(line.get(3)), tile_height);
                     e.worldLoad(eAPI, line.subList(4, line.size()));

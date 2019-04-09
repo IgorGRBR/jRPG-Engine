@@ -1,11 +1,12 @@
 package com.RPGE.gui;
 
+import com.RPGE.core.GUIAPI;
+
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class GUILayer
 {
-    private ArrayList<GUIElement> elements;
+    ArrayList<GUIElement> elements;
 
     public GUILayer()
     {
@@ -26,7 +27,7 @@ public class GUILayer
     {
         for (GUIElement e : elements)
         {
-            e.draw(guiapi);
+            if (e.visible) e.draw(guiapi);
         }
     }
 }

@@ -33,11 +33,23 @@ public class ImageAsset extends DrawableAsset
     @Override
     public void draw(int x, int y)
     {
-        img.drawCentered((float)x, (float)y);
+        img.draw(x, y);
+    }
+
+    @Override
+    public void drawCentered(int x, int y)
+    {
+        img.drawCentered(x, y);
     }
 
     @Override
     public void drawToContext(int x, int y, Graphics gfx)
+    {
+        gfx.drawImage(img, x, y);
+    }
+
+    @Override
+    public void drawToContextCentered(int x, int y, Graphics gfx)
     {
         gfx.drawImage(img, x - width/2, y - height/2);
     }

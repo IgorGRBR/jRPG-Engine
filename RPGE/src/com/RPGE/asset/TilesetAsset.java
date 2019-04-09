@@ -44,9 +44,21 @@ public class TilesetAsset extends DrawableAsset
     }
 
     @Override
+    protected void drawCentered(int x, int y)
+    {
+
+    }
+
+    @Override
     public void drawToContext(int x, int y, Graphics gfx)
     {
         drawToContext(x, y, 0, gfx);
+    }
+
+    @Override
+    protected void drawToContextCentered(int x, int y, Graphics gfx)
+    {
+
     }
 
     public void draw(int x, int y, int ind)

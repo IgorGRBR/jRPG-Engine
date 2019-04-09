@@ -4,16 +4,17 @@
 name ingame
 
 #'layer' specifies a layout layer to place ui elements into
-GUI is always rendered above tilemap and entity layers!
+#GUI is always rendered above tilemap and entity layers!
 layer 0
 
 #'element' followed by a element name specifies an ui element to be inserted into the current layer
-Any excessive arguments will be forwarded into element onUILoad event.
-There are a bunch of pre-built UI elements, like 'icon', 'box', etc...
-element icon -id hud_canvas -img hud_canvas -x 0.0 -y 0.0
+#Any excessive arguments will be forwarded into element onUILoad event.
+#There are a bunch of pre-built UI elements, like 'icon', 'box', etc...
+element icon -id hud_canvas -img npc -x 0.0 -y 0.0
+#element icon -id hud_canvas -img hud_canvas -x 0.0 -y 0.0
 
-element box -x 0.1 -y 0.6 -w 0.8 -h 0.3 -color black -outline-color white -outline 4
+element text_box -x 0.1 -y 0.6 -w 0.8 -h 0.3 -color black -outline-color white -outline 4 -visible 0
 
 layer 1
-element icon -img player_icon -parent-id hud_canvas -xpx 0 -ypx 0
-element status_bar -name health -parent-id hud_canvas -xpx 0 -ypx 0 -wpx 32 -hpx 32
+#element icon -img player_icon -parent hud_canvas -xpx 0 -ypx 0
+element status_bar -id health -parent hud_canvas -xpx 0 -ypx 0 -wpx 32 -hpx 32 -color red -back-color black

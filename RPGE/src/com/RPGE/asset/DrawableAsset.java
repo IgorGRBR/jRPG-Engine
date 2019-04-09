@@ -17,7 +17,9 @@ public abstract class DrawableAsset extends AbstractAsset
     }
 
     protected abstract void draw(int x, int y);
+    protected abstract void drawCentered(int x, int y);
     protected abstract void drawToContext(int x, int y, Graphics gfx);
+    protected abstract void drawToContextCentered(int x, int y, Graphics gfx);
     public int getWidth() { return width; }
     public int getHeight() { return height; }
 }

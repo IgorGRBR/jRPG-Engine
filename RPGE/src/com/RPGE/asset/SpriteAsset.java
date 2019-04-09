@@ -41,9 +41,18 @@ public class SpriteAsset extends DrawableAsset
     }
 
     @Override
+    protected void drawCentered(int x, int y) { drawCentered(x, y, 0, 0); }
+
+    @Override
     protected void drawToContext(int x, int y, Graphics gfx)
     {
         drawToContext(x, y, 0, 0, gfx);
+    }
+
+    @Override
+    protected void drawToContextCentered(int x, int y, Graphics gfx)
+    {
+        drawToContextCentered(x, y, 0, 0, gfx);
     }
 
     @Override
@@ -51,7 +60,7 @@ public class SpriteAsset extends DrawableAsset
     {
         try
         {
-            if (path == "" || path == null) throw new RPGEException("ImageAsset: path is empty!");
+            if (path == "" || path == null) throw new RPGEException("SpriteAsset: path is empty!");
             Image img = new Image(path);
             int tw = img.getWidth() / row_count;
             int th = img.getHeight() / col_count;
@@ -73,11 +82,21 @@ public class SpriteAsset extends DrawableAsset
 
     public final void draw(int x, int y, int r, int c)
     {
+        sheet.getSubImage(r, c).draw(x, y);
+    }
+
+    public final void drawCentered(int x, int y, int r, int c)
+    {
         sheet.getSubImage(r, c).draw(x - img_width/2, y - img_height/2);
     }
 
     public final void drawToContext(int x, int y, int r, int c, Graphics gfx)
     {
+        gfx.drawImage(sheet.getSubImage(r, c), x, y);
+    }
+    public final void drawToContextCentered(int x, int y, int r, int c, Graphics gfx)
+    {
         gfx.drawImage(sheet.getSubImage(r, c), x - img_width/2, y - img_height/2);
     }
+
 }

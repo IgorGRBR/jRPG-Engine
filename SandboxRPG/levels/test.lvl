@@ -3,6 +3,9 @@
 #'name' keyword specifies the decorative name of current stage
 name Test Place
 
+#'hud' specifies HUD layout to be used in current stage
+hud ingame
+
 #'tileset' keyword specifies the name of the tileset to use
 #Tileset can be specified once per layer!
 tileset tile_overworld

@@ -12,5 +12,5 @@ public abstract class AbstractSystem
     protected abstract void register(Entity e);
     protected abstract void remove(Entity e);
 
-    protected abstract void process(); //TODO: add api object here
+    protected abstract void process(); //TODO: add api object here(?)
 }

@@ -46,16 +46,16 @@ public class WorldController
         worlds.add(ws);
     }
 
-    public void load(int i, AssetManager am)
+    public void load(int i)
     {
-        worlds.get(i).load(am, entity_factory);
+        worlds.get(i).load();
     }
 
-    public void load(AssetManager am)
+    public void load()
     {
         for (WorldScene w : worlds)
         {
-            w.load(am, entity_factory);
+            w.load();
         }
     }
 
@@ -74,12 +74,12 @@ public class WorldController
         worlds.remove(ws);
     }
 
-    public void reload(WorldScene ws, int tw, int th, EntityAPI eAPI, AssetManager am)
+    public void reload(WorldScene ws, int tw, int th, EntityAPI eAPI)
     {
         worlds.remove(ws);
         ws = new WorldScene(ws.name, ws.path, tw, th, eAPI);
         worlds.add(ws);
-        ws.load(am, entity_factory);
+        ws.load();
         current_world = ws;
         init();
     }

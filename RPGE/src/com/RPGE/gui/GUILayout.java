@@ -1,7 +1,9 @@
 package com.RPGE.gui;
 
+import com.RPGE.core.GUIAPI;
+import com.RPGE.exception.RPGEException;
+
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class GUILayout
 {
@@ -15,6 +17,8 @@ public class GUILayout
         layers = l;
         elements = e;
     }
+
+    public String getName() { return name; }
 
     public void init(GUIAPI guiapi)
     {
@@ -50,5 +54,14 @@ public class GUILayout
     {
         elements.remove(e);
         layers.get(e.getLayer()).remove(e);
+    }
+
+    public GUIElement findElement(String name) throws RPGEException
+    {
+        for (GUIElement e : elements)
+        {
+            if (e.id.equals(name)) return e;
+        }
+        throw new RPGEException("Element with name " + name + " was not found!");
     }
 }

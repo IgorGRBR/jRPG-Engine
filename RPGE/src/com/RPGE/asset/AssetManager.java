@@ -17,6 +17,7 @@ public class AssetManager
         sprites = new AssetCollection<>();
         loaded = false;
 
+        //TODO: Add font resource!
         //Adding dummy assets, so they can be used as placeholders
         //Their usage will result into a exception throw
         images.add(new ImageAsset());

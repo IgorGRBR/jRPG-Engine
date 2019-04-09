@@ -6,13 +6,12 @@ import java.util.ArrayList;
 
 
 
-public class AssetCollection<T>
+public class AssetCollection<T extends AbstractAsset>
 {
     private ArrayList<T> items;
 
     public AssetCollection()
     {
-        //TODO: make sure T can only be a derived one from AbstractAsset
         items = new ArrayList<T>();
     }
 

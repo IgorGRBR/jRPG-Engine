@@ -4,9 +4,14 @@ import java.io.File;
 import java.util.ArrayList;
 
 import com.RPGE.asset.AssetManager;
-import com.RPGE.asset.ImageAsset;
 import com.RPGE.asset.TilesetAsset;
 import com.RPGE.exception.RPGEException;
+import com.RPGE.gui.GUIController;
+import com.RPGE.gui.GUIElement;
+import com.RPGE.gui.GUIElementFactory;
+import com.RPGE.gui.elements.BoxElement;
+import com.RPGE.gui.elements.IconElement;
+import com.RPGE.gui.elements.TextBoxElement;
 import org.newdawn.slick.*;
 
 public class Engine
@@ -17,6 +22,7 @@ public class Engine
     private boolean tilesize_set;
     InputState input_state;
     EntityFactory entity_factory;
+    GUIElementFactory ge_factory;
     EntityAPI eAPI;
 
     int tile_width, tile_height; //Size of a single tile
@@ -26,6 +32,7 @@ public class Engine
     private AssetManager asset_manager;
 
     ArrayList<WorldScene> world_scenes;
+    ArrayList<String> gui_layout_paths;
 
     public Engine()
     {
@@ -36,7 +43,9 @@ public class Engine
         world_scenes = new ArrayList<>();
         input_state = new InputState();
         entity_factory = new EntityFactory();
+        ge_factory = new GUIElementFactory();
         eAPI = new EntityAPI();
+        gui_layout_paths = new ArrayList<>();
     }
 
     public void init()
@@ -128,6 +137,23 @@ public class Engine
             e.printStackTrace();
         }
     }
+
+    public void addGUIElementClass(Class<? extends GUIElement> cla)
+    {
+        try
+        {
+            ge_factory.bind(cla);
+        }
+        catch (RPGEException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void addGUILayout(String path)
+    {
+        gui_layout_paths.add(path);
+    }
 }
 
 class EngineGame extends BasicGame
@@ -135,14 +161,16 @@ class EngineGame extends BasicGame
     private Engine engine;
 
     //Graphics stuff
-    Image gfx_img;
-    Graphics gfx;
+    Image gfx_img, gui_img;
+    Graphics gfx, gui_gfx;
 
-    //Entity API
+    //APIs
     EntityAPI eAPI;
+    GUIAPI gAPI;
 
-    //Scenes stuff;
+    //Controllers
     WorldController world_controller;
+    GUIController gui_controller;
 
     public EngineGame()
     {
@@ -164,14 +192,15 @@ class EngineGame extends BasicGame
         //Setup global drawing surface
         gfx_img = new Image(engine.tile_width * engine.res_width,
                 engine.tile_height*engine.res_height);
+        gui_img = new Image(engine.tile_width * engine.res_width,
+                engine.tile_height*engine.res_height);
         gfx = gfx_img.getGraphics();
+        gui_gfx = gui_img.getGraphics();
         gfx.setBackground(new Color(255,255,255));
+        gui_gfx.setBackground(new Color(255,255,255));
 
         //Load input
         engine.input_state.setInputProvider(container.getInput());
-
-        //Setup world controller
-        world_controller = new WorldController(engine.world_scenes, engine.entity_factory);
 
         //Bind basic inputs
         engine.input_state.bind("up", Input.KEY_UP);
@@ -182,6 +211,26 @@ class EngineGame extends BasicGame
         engine.input_state.bind("b", Input.KEY_X);
         engine.input_state.bind("c", Input.KEY_Z);
 
+        //Initialize default GUI elements
+        try
+        {
+            engine.ge_factory.bind(BoxElement.class);
+            engine.ge_factory.bind(TextBoxElement.class);
+            engine.ge_factory.bind(IconElement.class);
+        }
+        catch (RPGEException e)
+        {
+            e.printStackTrace();
+        }
+
+        //Create APIs
+        gAPI = new GUIAPI(engine.tile_width, engine.tile_height,
+                gfx_img.getWidth(), gfx_img.getHeight());
+
+        //Setup controllers
+        world_controller = new WorldController(engine.world_scenes, engine.entity_factory);
+        gui_controller = new GUIController(gAPI, engine.ge_factory);
+
         //Initialize Entity API
         eAPI.setScreenSize(engine.res_width, engine.res_height);
         eAPI.setTileDimensions(engine.tile_width, engine.tile_height);
@@ -189,13 +238,20 @@ class EngineGame extends BasicGame
         eAPI.setGFX(gfx);
         eAPI.setInputState(engine.input_state);
         eAPI.setWorldController(world_controller);
+        eAPI.setGUIController(gui_controller);
 
+        //Initialize GUI API
+        gAPI.setGFX(gui_gfx);
+        gAPI.setAssetManager(engine.assetManager());
+        gAPI.setInputState(engine.input_state);
+        gAPI.setGUIController(gui_controller);
+        eAPI.setGUIAPI(gAPI);
+
+        //Load all layouts
+        gui_controller.load(engine.gui_layout_paths);
 
         //Load queued levels
-        world_controller.load(engine.assetManager());
-
-        //Testing stuff
-        //testImg = engine.assetManager().getImage("plr");
+        world_controller.load();
 
         //Initialize first scene in the list
         world_controller.setCurrentWorld(0);
@@ -207,13 +263,19 @@ class EngineGame extends BasicGame
     {
         engine.input_state.update();
         world_controller.step(delta);
+        gui_controller.step();
     }
 
     public void render(GameContainer container, Graphics g) throws SlickException
     {
         world_controller.draw(gfx);
+        gui_controller.draw();
 
+        gfx.setColor(Color.black);
+        gui_gfx.setColor(Color.black);
         gfx.flush();
+        gui_gfx.flush();
         gfx_img.draw(0, 0,engine.gfx_scale);
+        gui_img.draw(0, 0,engine.gfx_scale);
     }
 }
