@@ -20,7 +20,7 @@ public class NPCEntity extends Entity implements IEntity
     }
 
     @Override
-    public void worldLoad(EntityAPI eAPI, List<String> args)
+    public void sceneLoad(EntityAPI eAPI, List<String> args)
     {
         System.out.println("NPCEntity.worldLoad");
     }

@@ -14,6 +14,8 @@ public abstract class AbstractScene
 
     };
 
+    public String getName() { return name; }
+
     public abstract void load();
     public abstract void init(); //Initialize objects here
     public abstract void step(float delta);

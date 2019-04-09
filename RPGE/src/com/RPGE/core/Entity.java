@@ -51,7 +51,7 @@ public abstract class Entity
 
     //Events
     public abstract void init(EntityAPI eAPI);
-    public abstract void worldLoad(EntityAPI eAPI, List<String> args);
+    public abstract void sceneLoad(EntityAPI eAPI, List<String> args);
     public abstract void levelCollision(EntityAPI eAPI, int tile_data);
     public abstract void step(EntityAPI eAPI);
     public abstract void draw(EntityAPI eAPI);

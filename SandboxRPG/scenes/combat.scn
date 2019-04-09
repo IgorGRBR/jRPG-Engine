@@ -1,0 +1,15 @@
+#RPGE Action scene format example
+
+#'name' specifies a layout name to be used to index current action scene
+name battle
+
+#'layer' specifies a layout layer to place entities into
+layer 0
+
+#'actor' specifies entity to spawn.
+#entity should be followed by its name and x and y positions (in pixels)
+#Any additional arguments after these will be forwarded towards entity onSceneLoad event
+actor plr -x 0.2 -y 0.7
+
+layer -1
+actor back

@@ -7,55 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d499b4ea-a4c0-49de-a39c-dd944e0df9e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/GUIAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/elements/BoxElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/elements/IconElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/elements/TextBoxElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/SandboxRPG/StatusBarElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/DrawableAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/DrawableAsset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/ImageAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/ImageAsset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/SpriteAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/SpriteAsset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/TilesetAsset.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/TilesetAsset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActionLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActionScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActorAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/SceneManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RPGE/src/com/RPGE/system/AbstractSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RPGE/src/com/RPGE/system/AbstractSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/RPGEngine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/RPGEngine.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/SandboxRPG.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/SandboxRPG.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/levels/test.lvl" beforeDir="false" afterPath="$PROJECT_DIR$/build/levels/test.lvl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/ingame.uil" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/ingame.uil" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/test.lvl" beforeDir="false" afterPath="$PROJECT_DIR$/levels/test.lvl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SandboxGame_jar/RPGEngine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SandboxGame_jar/RPGEngine.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/asset/AssetCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/asset/AssetCollection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/asset/AssetManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/asset/AssetManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/AbstractScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/AbstractScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/Engine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EngineGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EngineGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/Entity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EntityAPI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EntityAPI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EntityAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/EntityAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldScene$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/core/WorldScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUIAPI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUIController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUIController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUIElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUIElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUILayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUILayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUILayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/gui/GUILayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/world/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RPGE/com/RPGE/world/Camera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/PlayerEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/PlayerEntity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/NPCEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/NPCEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/PlayerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SandboxGame/com/SandboxRPG/PlayerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/SandboxRPG/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/SandboxRPG/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/SandboxRPG/NPCEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/SandboxRPG/NPCEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +44,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="278" column="15" selection-start-line="278" selection-start-column="15" selection-end-line="278" selection-end-column="15" />
+            <state relative-caret-position="-231">
+              <caret line="288" column="38" lean-forward="true" selection-start-line="288" selection-start-column="38" selection-end-line="288" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2777#2778#0" expanded="true" />
+                <element signature="e#2813#2814#0" expanded="true" />
+                <element signature="e#3139#3140#0" expanded="true" />
+                <element signature="e#3177#3178#0" expanded="true" />
+                <element signature="e#3311#3312#0" expanded="true" />
+                <element signature="e#3350#3351#0" expanded="true" />
+                <element signature="e#4450#4451#0" expanded="true" />
+                <element signature="e#4492#4493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActionScene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,24 +89,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/Main.java">
+        <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActorAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="38" />
+            <state relative-caret-position="267">
+              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityAPI.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/SceneManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+            <state relative-caret-position="133">
+              <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3563#3564#0" expanded="true" />
+                <element signature="e#3602#3603#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,9 +134,12 @@
       <find>chunksize_y</find>
       <find>tilemap</find>
       <find>@Override</find>
+      <find>world_controller</find>
+      <find>eAPI</find>
     </findStrings>
     <replaceStrings>
       <replace>chunk_height</replace>
+      <replace>scene_manager</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -132,13 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/draw/RPGEImage.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AbstractAsset.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/file/RPGEFile.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/TilemapChunk.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/EntityContainer.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/EntityCollection.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/StepEntityCollection.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/Entity.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Directions.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/InputState.java" />
@@ -157,12 +166,8 @@
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/IGUIElement.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityFactory.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElementFactory.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java" />
-        <option value="$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/world/Camera.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIAPI.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetCollection.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/system/AbstractSystem.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/AssetManager.java" />
@@ -170,19 +175,30 @@
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayer.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayout.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElement.java" />
-        <option value="$PROJECT_DIR$/src/com/SandboxRPG/Main.java" />
         <option value="$PROJECT_DIR$/src/com/SandboxRPG/StatusBarElement.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/elements/IconElement.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/elements/BoxElement.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIController.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/GUIAPI.java" />
-        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/DrawableAsset.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/TilesetAsset.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/ImageAsset.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/asset/SpriteAsset.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActionAPI.java" />
+        <option value="$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActorFactory.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActionLayer.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/action/Actor.java" />
         <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityAPI.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActorAPI.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActionScene.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/SceneManager.java" />
+        <option value="$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java" />
+        <option value="$PROJECT_DIR$/src/com/SandboxRPG/Main.java" />
       </list>
     </option>
   </component>
@@ -221,7 +237,7 @@
               <item name="RPGE" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="RPGE" type="462c0819:PsiDirectoryNode" />
-              <item name="asset" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RPGEngine" type="b2602c69:ProjectViewProjectNode" />
@@ -236,13 +252,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="RPGE" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RPGEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RPGE" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="RPGE" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RPGEngine" type="b2602c69:ProjectViewProjectNode" />
@@ -272,7 +281,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554738540248" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554843497515" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../RPGE/lib/tinylinepp.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -348,7 +357,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,32 +412,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/world/EntityCollection.java" />
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/world/StepEntityCollection.java" />
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../RPGE/lib/slick.jar!/org/newdawn/slick/Input.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../RPGE/lib/slick.jar!/org/newdawn/slick/GameContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
-          <folding>
-            <element signature="e#7014#7015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/InputState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -559,17 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/IEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="e#90#91#0" expanded="true" />
-            <element signature="e#115#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/IGUIElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -578,25 +550,6 @@
             <element signature="e#92#93#0" expanded="true" />
             <element signature="e#117#118#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -614,16 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/system/AbstractSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -637,28 +580,6 @@
           <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,13 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-387">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -745,38 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="58" column="67" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3113">
-          <caret line="172" column="4" selection-start-line="172" selection-start-column="4" selection-end-line="175" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4707#4708#0" expanded="true" />
-            <element signature="e#4738#4739#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/StatusBarElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -791,50 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/GUIAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="278" column="15" selection-start-line="278" selection-start-column="15" selection-end-line="278" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Override.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,10 +721,227 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/PlayerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4651#4652#0" expanded="true" />
+            <element signature="e#4682#4683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/IEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <element signature="e#90#91#0" expanded="true" />
+            <element signature="e#115#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUILayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="859">
+          <caret line="58" column="67" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/action/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/action/ActionLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/gui/GUIElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/GUIAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="87" column="4" selection-start-line="87" selection-start-column="4" selection-end-line="104" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/AbstractScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/WorldScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="282" column="90" selection-start-line="282" selection-start-column="90" selection-end-line="282" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/EntityAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+        <state relative-caret-position="132">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+            <element signature="e#1288#1289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActionScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/ActorAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/SceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3563#3564#0" expanded="true" />
+            <element signature="e#3602#3603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RPGE/src/com/RPGE/core/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="288" column="38" lean-forward="true" selection-start-line="288" selection-start-column="38" selection-end-line="288" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2777#2778#0" expanded="true" />
+            <element signature="e#2813#2814#0" expanded="true" />
+            <element signature="e#3139#3140#0" expanded="true" />
+            <element signature="e#3177#3178#0" expanded="true" />
+            <element signature="e#3311#3312#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#4450#4451#0" expanded="true" />
+            <element signature="e#4492#4493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/SandboxRPG/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

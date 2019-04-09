@@ -3,6 +3,8 @@ package com.RPGE.core;
 import java.io.File;
 import java.util.ArrayList;
 
+import com.RPGE.action.Actor;
+import com.RPGE.action.ActorFactory;
 import com.RPGE.asset.AssetManager;
 import com.RPGE.asset.TilesetAsset;
 import com.RPGE.exception.RPGEException;
@@ -23,15 +25,15 @@ public class Engine
     InputState input_state;
     EntityFactory entity_factory;
     GUIElementFactory ge_factory;
-    EntityAPI eAPI;
-
+    ActorFactory actor_factory;
     int tile_width, tile_height; //Size of a single tile
     int res_width, res_height; //Resolution (in tiles)
     float gfx_scale; //Coeff to scale graphics with
 
     private AssetManager asset_manager;
 
-    ArrayList<WorldScene> world_scenes;
+    ArrayList<String> world_scenes;
+    ArrayList<String> action_scenes;
     ArrayList<String> gui_layout_paths;
 
     public Engine()
@@ -41,11 +43,12 @@ public class Engine
         tilesize_set = false;
         asset_manager = new AssetManager();
         world_scenes = new ArrayList<>();
+        action_scenes = new ArrayList<>();
         input_state = new InputState();
         entity_factory = new EntityFactory();
         ge_factory = new GUIElementFactory();
-        eAPI = new EntityAPI();
         gui_layout_paths = new ArrayList<>();
+        actor_factory = new ActorFactory();
     }
 
     public void init()
@@ -104,8 +107,12 @@ public class Engine
 
     public void addLevel(String path)
     {
-        WorldScene ws = new WorldScene("", path, tile_width, tile_height, eAPI);
-        world_scenes.add(ws);
+        world_scenes.add(path);
+    }
+
+    public void addActionScene(String path)
+    {
+        action_scenes.add(path);
     }
 
     public void bindKey(String name, int key)
@@ -131,6 +138,18 @@ public class Engine
         try
         {
             entity_factory.bind(cla);
+        }
+        catch (RPGEException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void addActorClass(Class<? extends Actor> cla)
+    {
+        try
+        {
+            actor_factory.bind(cla);
         }
         catch (RPGEException e)
         {
@@ -167,9 +186,10 @@ class EngineGame extends BasicGame
     //APIs
     EntityAPI eAPI;
     GUIAPI gAPI;
+    ActorAPI aAPI;
 
     //Controllers
-    WorldController world_controller;
+    SceneManager scene_manager;
     GUIController gui_controller;
 
     public EngineGame()
@@ -180,7 +200,6 @@ class EngineGame extends BasicGame
     {
         super("RPGE game");
         engine = e;
-        eAPI = engine.eAPI;
     }
 
     //Testing vars
@@ -224,11 +243,13 @@ class EngineGame extends BasicGame
         }
 
         //Create APIs
+        eAPI = new EntityAPI();
         gAPI = new GUIAPI(engine.tile_width, engine.tile_height,
                 gfx_img.getWidth(), gfx_img.getHeight());
+        aAPI = new ActorAPI(gfx_img.getWidth(), gfx_img.getHeight());
 
         //Setup controllers
-        world_controller = new WorldController(engine.world_scenes, engine.entity_factory);
+        scene_manager = new SceneManager(engine.entity_factory, engine.actor_factory);
         gui_controller = new GUIController(gAPI, engine.ge_factory);
 
         //Initialize Entity API
@@ -237,7 +258,7 @@ class EngineGame extends BasicGame
         eAPI.setAssetManager(engine.assetManager());
         eAPI.setGFX(gfx);
         eAPI.setInputState(engine.input_state);
-        eAPI.setWorldController(world_controller);
+        eAPI.setWorldController(scene_manager);
         eAPI.setGUIController(gui_controller);
 
         //Initialize GUI API
@@ -247,28 +268,39 @@ class EngineGame extends BasicGame
         gAPI.setGUIController(gui_controller);
         eAPI.setGUIAPI(gAPI);
 
+        //Initialize Actor API
+        aAPI.setGFX(gfx);
+        aAPI.setAssetManager(engine.assetManager());
+        aAPI.setInputState(engine.input_state);
+        aAPI.setGUIController(gui_controller);
+        aAPI.setGUIAPI(gAPI);
+        aAPI.setSceneManager(scene_manager);
+
         //Load all layouts
         gui_controller.load(engine.gui_layout_paths);
 
         //Load queued levels
-        world_controller.load();
+        scene_manager.addWorlds(engine.world_scenes, eAPI.tile_width, eAPI.tile_height, eAPI);
+        scene_manager.addActionScenes(engine.action_scenes, aAPI);
+        scene_manager.load();
 
         //Initialize first scene in the list
-        world_controller.setCurrentWorld(0);
-        world_controller.init();
+        scene_manager.setCurrentWorld(0);
+        scene_manager.switchToWorld();
+        scene_manager.init();
     }
 
     @Override
     public void update(GameContainer container, int delta) throws SlickException
     {
         engine.input_state.update();
-        world_controller.step(delta);
+        scene_manager.step(delta);
         gui_controller.step();
     }
 
     public void render(GameContainer container, Graphics g) throws SlickException
     {
-        world_controller.draw(gfx);
+        scene_manager.draw(gfx);
         gui_controller.draw();
 
         gfx.setColor(Color.black);

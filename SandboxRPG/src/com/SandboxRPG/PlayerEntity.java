@@ -1,12 +1,10 @@
 package com.SandboxRPG;
 
-import com.RPGE.asset.ImageAsset;
 import com.RPGE.asset.SpriteAsset;
 import com.RPGE.core.Direction;
 import com.RPGE.core.Entity;
 import com.RPGE.core.EntityAPI;
 import com.RPGE.core.IEntity;
-import org.lwjgl.Sys;
 
 import java.util.List;
 
@@ -49,7 +47,7 @@ public class PlayerEntity extends Entity implements IEntity
     }
 
     @Override
-    public void worldLoad(EntityAPI eAPI, List<String> args)
+    public void sceneLoad(EntityAPI eAPI, List<String> args)
     {
         System.out.println("PlayerEntity.worldLoad");
     }
@@ -63,12 +61,14 @@ public class PlayerEntity extends Entity implements IEntity
         if (tile_data == 2)
         {
             eAPI.translate(this, prev_x, prev_y);
+            moving = false;
             eAPI.switchWorld("Inverse Loading Test");
         }
 
         if (tile_data == 5)
         {
             eAPI.translate(this, prev_x, prev_y);
+            moving = false;
             eAPI.switchWorld("Test Place");
         }
     }

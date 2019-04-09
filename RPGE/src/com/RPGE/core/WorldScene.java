@@ -2,7 +2,6 @@ package com.RPGE.core;
 
 import java.util.*;
 
-import com.RPGE.asset.AssetManager;
 import com.RPGE.asset.TilesetAsset;
 import com.RPGE.exception.RPGEException;
 import com.RPGE.file.RPGEFile;
@@ -15,7 +14,6 @@ import org.newdawn.slick.Graphics;
 public class WorldScene extends AbstractScene
 {
     //Variables
-    private String world_name;
     private ArrayList<Entity> entities;
     private Tilemap tilemap;
     private int tile_width, tile_height;
@@ -37,7 +35,6 @@ public class WorldScene extends AbstractScene
         entities = new ArrayList<>();
         path = p;
         loaded = false;
-        world_name = "";
         eAPI = ea;
     }
 
@@ -45,7 +42,7 @@ public class WorldScene extends AbstractScene
     public void load()
     {
         if (loaded) return;
-        this.path = path;
+        //this.path = path;
         RPGEFile file = new RPGEFile(path, true);
 
         //Temp state variables
@@ -75,10 +72,10 @@ public class WorldScene extends AbstractScene
             switch (line.get(0))
             {
                 case "name":
-                    world_name = line.get(1);
+                    name = line.get(1);
                     for (int i = 2; i < line.size(); i++)
                     {
-                        world_name += " " + line.get(i);
+                        name += " " + line.get(i);
                     }
                     break;
                 case "hud":
@@ -164,10 +161,10 @@ public class WorldScene extends AbstractScene
                     }
                     break;
                 case "entity":
-                    Entity e = eAPI.world_controller.entityFactory().buildEntity(line.get(1));
+                    Entity e = eAPI.scene_manager.entityFactory().buildEntity(line.get(1));
                     e.setPosX(Integer.parseInt(line.get(2)), tile_width);
                     e.setPosY(Integer.parseInt(line.get(3)), tile_height);
-                    e.worldLoad(eAPI, line.subList(4, line.size()));
+                    e.sceneLoad(eAPI, line.subList(4, line.size()));
                     layer_entities.get(current_layer_index).add(e);
                     entities.add(e);
                     break;
@@ -290,6 +287,4 @@ public class WorldScene extends AbstractScene
             draw_system.draw(eAPI, i);
         }
     }
-
-    public String getName() { return world_name; }
 }

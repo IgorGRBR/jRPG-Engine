@@ -11,7 +11,6 @@ import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class EntityAPI
 {
@@ -26,7 +25,7 @@ public class EntityAPI
     int screen_tile_count_h, screen_tile_count_v; //Horizontal and vertical screen size (in tiles)
     PhysicsSystem phys_system;
     Camera camera;
-    WorldController world_controller;
+    SceneManager scene_manager;
     GUIAPI gAPI;
     GUIController g_controller;
 
@@ -61,11 +60,6 @@ public class EntityAPI
         phys_system = ps;
     }
 
-    void setEntityList(ArrayList<Entity> e)
-    {
-        entities = e;
-    }
-
     void setTileDimensions(int tw, int th)
     {
         tile_width = tw;
@@ -74,7 +68,7 @@ public class EntityAPI
 
     void setCamera(Camera cam) { camera = cam; }
 
-    void setWorldController(WorldController wc) { world_controller = wc; }
+    void setWorldController(SceneManager wc) { scene_manager = wc; }
 
     void setGUIAPI(GUIAPI g)
     {
@@ -93,7 +87,7 @@ public class EntityAPI
 
     public void reloadWorld()
     {
-        world_controller.reload(world_controller.getCurrentWorld(),
+        scene_manager.reload(scene_manager.getCurrentWorld(),
             tile_width, tile_height, this);
     }
 
@@ -101,8 +95,8 @@ public class EntityAPI
     {
         try
         {
-            WorldScene ws = world_controller.find(world);
-            world_controller.switchTo(ws);
+            WorldScene ws = (WorldScene)scene_manager.findWorld(world);
+            scene_manager.switchTo(ws);
         }
         catch (RPGEException e)
         {
